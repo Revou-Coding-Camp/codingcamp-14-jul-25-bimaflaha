@@ -5,18 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homigo</title>
 
+    <!-- My Style -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Featers icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
+
   <body>
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">HOMI<span>GO.</span></a>
+    <!-- Navbar Start -->
+    <nav class="navbar" id="navbar">
+      <img src="asset/Logo.png" alt="Rent Nava Logo" />
 
       <div class="navbar-nav">
         <a href="#home">Home</a>
-        <a href="#our-profile">Our Profile</a>
-        <a href="#product">Product</a>
-        <a href="#message-us">Message Us</a>
+        <a href="#about-us">About</a>
+        <a href="#service">Service</a>
+        <a href="#advantage">Advantage</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#message-us" id="message"
+          ><i data-feather="mail"></i><span class="label">Message</span></a
+        >
+        <a href="#" id="hamburger"><i data-feather="menu"></i></a>
       </div>
     </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="message" id="home">
+      <main class="content">
+        <div class="greeting" id="greeting"></div>
+        <a href="#" class="btn-hero">Explore Now</a>
+      </main>
+    </section>
+
+    <!-- Hero Section End -->
+
+    <!-- About Start -->
+    <section class="about" id="about-us">
+      <div class="row">
+        <div class="about-img">
+          <img src="asset/about-img.jpg" alt="about-us" />
+        </div>
+
+        <div class="contents">
+          <span class="tag">About Us</span>
+          <h2>What Makes Us Different From Others</h2>
+          <p>
+            Unlock smoother and more enjoyable trips with Nava's seamless
+            booking system designed to get you on the road faster, with zero
+            hassle. Travel in comfort with our well maintained vehicles, and
+            feel confident knowing trusted rental service, every step of the
+            way.
+          </p>
+          <a href="#" class="btn-about">Know More About Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Service Start  -->
+    <section class="service" id="service">
+      <h2>Our <span>Service</span></h2>
+      <p>
+        Trusted car rental service committed to delivering seamless and
+        comfortable travel experiences every step of the way.
+      </p>
+
+      <div class="service-grid">
+        <!-- Card 1: Rental Mobil -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-car service-icon"></i>
+          </div>
+          <h3 class="service-title">Flexible Car Rental</h3>
+          <p class="service-description">
+            Choose from a variety of car types to suit your needs, with daily,
+            weekly, or monthly rental options.
+          </p>
+          <a href="#" class="explore-button">Explore Car</a>
+        </div>
+
+        <!-- Card 2: Antar Jemput Bandara -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-plane-departure service-icon"></i>
+          </div>
+          <h3 class="service-title">Airport Pickup and Dropoff</h3>
+          <p class="service-description">
+            Convenient and timely shuttle service to and from the airport,
+            hassle-free.
+          </p>
+          <a href="#" class="explore-button">Book Now</a>
+        </div>
+
+        <!-- Card 3: Sewa dengan Sopir -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-user-tie service-icon"></i>
+          </div>
+          <h3 class="service-title">Rent with Driver</h3>
+          <p class="service-description">
+            Enjoy a worry-free journey with our professional and experienced
+            drivers.
+          </p>
+          <a href="#" class="explore-button">More Info</a>
+        </div>
+
+        <!-- Card 4: Layanan Korporat -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-building service-icon"></i>
+          </div>
+          <h3 class="service-title">Corporate services</h3>
+          <p class="service-description">
+            complete transportation solutions for your business needs and
+            corporate events.
+          </p>
+          <a href="#" class="explore-button">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- Service End  -->
+
+    <!-- Advantages Start-->
+
+    <section id="advantage" class="advantages">
+      <h2>Our <span>Advantages</span></h2>
+      <p>
+        Trusted by hundreds and driven by excellence, we go the extra mile to
+        make every ride smooth, safe, and unforgettable.
+      </p>
+
+      <div id="stats-section" class="advantages-stats">
+        <div class="stat-item">
+          <h3 class="count" data-target="4">0</h3>
+          <p>Year Experience</p>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <h3 class="count" data-target="200">0</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <h3 class="count" data-target="4.8">0</h3>
+          <p>Overall Ranting</p>
+        </div>
+      </div>
+    </section>
+    <!-- Advantages End -->
+
+    <!-- Contact Form Start -->
+    <section class="contact-section" id="message-us">
+      <h2><span>Message</span> Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <textarea
+          id="message-form"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="formOutput"></div>
+    </section>
+    <!-- Contact Form End -->
+
+    <!-- Footer Start-->
+    <footer>
+      <div class="footer">
+        <div class="footer-top">
+          <div class="logo-andress">
+            <img src="asset/Logo.png" alt="Rent Car Logo" />
+            <p>
+              Taman Raya, Blok DM No 01 RT/RW 04/07, Kelurahan Belian, Kecamatan
+              Batam Kota, Kepulauan Riau
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <ul>
+              <li>Blog</li>
+              <li>In Press</li>
+              <li>Gallery</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>FAQ</h4>
+            <ul>
+              <li>Manage Booking</li>
+              <li>Payments</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Further Information</h4>
+            <ul>
+              <li>Support</li>
+              <li>Whatsapp</li>
+              <li>Telegram</li>
+              <li>Call Center</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <span>A Member of Nava Rent Car</span>
+          <span>&copy; 2022-2025, All Rights Reserved</span>
+          <div class="social-icon">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer End-->
+
+    <!-- Featers Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Js Script -->
+    <script src="js/script.js"></script>
   </body>
 </html>
