@@ -357,17 +357,120 @@ body {
   color: white;
 }
 
+/* Vehicle Card */
+.popular-vehicles-section {
+  margin: 0 auto;
+  text-align: left;
+  color: #010101;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #030303;
+  margin-bottom: 3rem;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.vehicle-card {
+  background-color: #ffffff; /* Darker background for cards */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  color: #010101;
+  height: 500px;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.vehicle-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.favorite-icon {
+  color: #ff0707;
+  cursor: pointer;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 3rem 0;
+}
+
+.vehicle-footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #030303;
+}
+
+.rent-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #214ce0; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+  background-color: #010101;
+}
+
 /* Advantages */
 .advantages,
 .service,
 .vision-mission,
-.footer-bonus {
+.footer-bonus,
+.popular-vehicles-section {
   padding: 8rem 3% 0;
 }
 
 .advantages h2,
 .service h2,
-.vision-mission h2 {
+.vision-mission h2,
+.popular-vehicles-section h2 {
   text-align: center;
   font-size: 2.3rem;
 }
@@ -384,7 +487,8 @@ body {
 }
 
 .advantages p,
-.service p {
+.service p,
+.popular-vehicles-section p {
   text-align: center;
   max-width: 38rem;
   margin: 1rem auto;
@@ -797,6 +901,44 @@ hr {
     font-size: 1.2rem;
   }
 
+  /* Vehicle Card */
+  .popular-vehicles-section {
+    padding: 3rem 25px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .vehicles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .vehicle-card {
+    height: 350px;
+  }
+
+  .vehicle-image {
+    height: 180px;
+  }
+  .vehicle-header,
+  .vehicle-footer {
+    padding: 1rem;
+  }
+  .vehicle-name {
+    font-size: 1rem;
+  }
+  .vehicle-price {
+    font-size: 1.1rem;
+  }
+  .rent-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
   /* advantages */
   .advantages-stats {
     gap: 4rem;
@@ -845,5 +987,38 @@ hr {
 @media (max-width: 480px) {
   html {
     font-size: 55%;
+  }
+
+  /* vehicle card */
+  .popular-vehicles-section {
+    padding: 2rem 10px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .vehicles-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    gap: 1rem;
+  }
+  .vehicle-image {
+    height: 160px;
+  }
+  .vehicle-header,
+  .vehicle-footer {
+    padding: 0.8rem;
+  }
+  .vehicle-name {
+    font-size: 0.9rem;
+  }
+  .vehicle-price {
+    font-size: 1rem;
+  }
+  .rent-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
